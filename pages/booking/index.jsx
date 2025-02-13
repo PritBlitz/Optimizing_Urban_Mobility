@@ -5,7 +5,6 @@ const index = () => {
   return (
     <>
     <BookingPage/>
-    
     </>
   )
 }

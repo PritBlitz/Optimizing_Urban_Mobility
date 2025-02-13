@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from 'react';
 import { MapPin, Navigation, Bike, Car, Truck, Bus } from 'lucide-react';
 
