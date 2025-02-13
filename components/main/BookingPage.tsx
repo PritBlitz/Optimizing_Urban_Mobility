@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { MapPin, Navigation, Bike, Car, Truck, Bus } from 'lucide-react';
+import Link from 'next/link';
 
 const BookingPage = () => {
   const [selectedVehicle, setSelectedVehicle] = useState('');
@@ -68,16 +69,18 @@ const BookingPage = () => {
           </div>
 
           {/* Book Now Button */}
-          <button className="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-            Book Now
-          </button>
+
+          <Link href="/pre" className="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors block text-center">
+  Find Best Routes
+</Link>
+
         </div>
 
         {/* Right Section - Image */}
         <div className="hidden md:block">
           <div className="h-full w-full rounded-2xl overflow-hidden">
             <img
-              src="/api/placeholder/600/800"
+              src="travel.webp"
               alt="Transportation"
               className="w-full h-full object-cover"
             />
