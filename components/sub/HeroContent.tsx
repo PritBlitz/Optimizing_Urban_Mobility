@@ -70,6 +70,7 @@ const HeroContent = () => {
         /> */}
       </motion.div>
     </motion.div>
+    
   );
 };
 

@@ -1,6 +1,8 @@
 import { Socials } from "../../constants";
 import Image from "next/image";
 import React from "react";
+import Link from 'next/link';
+
 
 const Navbar = () => {
   return (
@@ -31,9 +33,9 @@ const Navbar = () => {
             <a href="#resources" className="cursor-pointer">
               Resources
             </a>
-            <a href="#" className="cursor-pointer">
+            <Link href="/booking" className="cursor-pointer">
               Get Started
-            </a>
+            </Link>
           </div>
         </div>
 
