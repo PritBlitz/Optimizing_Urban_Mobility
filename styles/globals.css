@@ -66,6 +66,7 @@ html {
   scroll-behavior: smooth;
 }
 
+<<<<<<< HEAD
 .card-3d {
   transform-style: preserve-3d;
 }
@@ -87,3 +88,17 @@ html {
 body {
   perspective: 1000px;
 }
+=======
+@keyframes neonGlow {
+  0% { text-shadow: 0 0 8px #fff, 0 0 16px #0ea5e9, 0 0 24px #0284c7, 0 0 32px #0369a1; }
+  50% { text-shadow: 0 0 12px #fff, 0 0 20px #38bdf8, 0 0 28px #0ea5e9, 0 0 36px #0284c7; }
+  100% { text-shadow: 0 0 8px #fff, 0 0 16px #0ea5e9, 0 0 24px #0284c7, 0 0 32px #0369a1; }
+}
+
+.neon-glow {
+  animation: neonGlow 3s infinite alternate ease-in-out;
+  -webkit-animation: neonGlow 3s infinite alternate ease-in-out;
+}
+
+
+>>>>>>> 545222fe4b7aa08b8e3629fcf874e07677be4cf9
