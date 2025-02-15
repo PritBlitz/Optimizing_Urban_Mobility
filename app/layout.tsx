@@ -4,6 +4,7 @@ import StarsCanvas from "@/components/main/StarBackground";
 import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
 import "../styles/globals.css"
+import { ClerkProvider } from "@clerk/nextjs";
 
  
 const inter = Inter({ subsets: ["latin"] });
@@ -13,12 +14,11 @@ export const metadata: Metadata = {
   description: "This is Home Page",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children,}: {
+  children: React.ReactNode; }) {
+
   return (
+    <ClerkProvider>
     <html lang="en">
       <body
         className={`${inter.className} bg-[#030014] overflow-y-scroll overflow-x-hidden`}
@@ -29,5 +29,6 @@ export default function RootLayout({
         <Footer />
       </body>
     </html>
+    </ClerkProvider>
   );
 }
