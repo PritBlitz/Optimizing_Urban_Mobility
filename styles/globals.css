@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-
 .cursive {
   font-family: "Cedarville Cursive", cursive;
 }
+
 .Welcome-text {
   background: linear-gradient(
       0deg,
@@ -20,6 +20,7 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .Welcome-box {
   isolation: isolate;
   overflow: hidden;
@@ -29,9 +30,7 @@
   border-radius: 32px;
   box-shadow: inset 0 -7px 11px #a48fff1f;
   display: flex;
-
   position: relative;
-  width: -moz-max-content;
   width: max-content;
   transition: 0.45s cubic-bezier(0.6, 0.6, 0, 1) box-shadow;
 }
@@ -45,6 +44,7 @@
     rgba(113, 47, 255, 0.12);
   box-shadow: inset 0 0 12px #bf97ff3d;
 }
+
 .button-primary:hover {
   background: linear-gradient(
       180deg,
@@ -55,30 +55,55 @@
   box-shadow: inset 0 0 12px #bf97ff70;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
+/* Hide scrollbar for IE, Edge, and Firefox */
 .scrollbar-hidden {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;
 }
-
-
 
 html {
   scroll-behavior: smooth;
 }
 
+.card-3d {
+  transform-style: preserve-3d;
+}
+
+.card-3d::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* Improve depth perception */
+body {
+  perspective: 1000px;
+}
+
 @keyframes neonGlow {
-  0% { text-shadow: 0 0 8px #fff, 0 0 16px #0ea5e9, 0 0 24px #0284c7, 0 0 32px #0369a1; }
-  50% { text-shadow: 0 0 12px #fff, 0 0 20px #38bdf8, 0 0 28px #0ea5e9, 0 0 36px #0284c7; }
-  100% { text-shadow: 0 0 8px #fff, 0 0 16px #0ea5e9, 0 0 24px #0284c7, 0 0 32px #0369a1; }
+  0% {
+    text-shadow: 0 0 8px #fff, 0 0 16px #0ea5e9, 0 0 24px #0284c7, 0 0 32px #0369a1;
+  }
+  50% {
+    text-shadow: 0 0 12px #fff, 0 0 20px #38bdf8, 0 0 28px #0ea5e9, 0 0 36px #0284c7;
+  }
+  100% {
+    text-shadow: 0 0 8px #fff, 0 0 16px #0ea5e9, 0 0 24px #0284c7, 0 0 32px #0369a1;
+  }
 }
 
 .neon-glow {
   animation: neonGlow 3s infinite alternate ease-in-out;
   -webkit-animation: neonGlow 3s infinite alternate ease-in-out;
 }
-
-
