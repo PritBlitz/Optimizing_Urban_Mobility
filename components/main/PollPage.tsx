@@ -1,4 +1,7 @@
 import React, { useState, ChangeEvent ,useEffect} from "react";
+import { useUser } from "@clerk/nextjs";
+// const { user } = useUser();
+// return <h1>Your User ID: {user?.id}</h1>;
 import axios from "axios";
 import { 
   Autocomplete, 
