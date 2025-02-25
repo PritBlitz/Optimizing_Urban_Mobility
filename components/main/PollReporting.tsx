@@ -51,9 +51,7 @@ const button3DEffect = {
 
 const PollAndLiveStatus = () => {
   const [currentView, setCurrentView] = useState("poll");
-  const [pollData, setPollData] = useState<
-    { location: string; condition: string; image?: string }[]
-  >([]);
+
 
   // const handlePollSubmit = async (location: string, condition: string, imageFile?: File) => {
   //   try {
@@ -140,7 +138,7 @@ const PollAndLiveStatus = () => {
             {currentView === "poll" ? (
               <PollPage />
             ) : (
-              <LiveStatusPage pollData={pollData} />
+              <LiveStatusPage />
             )}
           </motion.div>
         </AnimatePresence>

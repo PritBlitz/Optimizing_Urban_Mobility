@@ -193,18 +193,18 @@ const PollPage: React.FC = () => {
 
     const formData = new FormData();
     formData.append("location", location);
-    formData.append("condition", condition);
+    formData.append("roadCondition", condition);
     formData.append("roadQuality", roadQuality);
 
-    if (userData) {
-        formData.append("userId", userData.id);
-        formData.append("userName", userData.name);
-      }
+ 
+        formData.append("userID", "24");
+        formData.append("userName", "tushar");
+      
     if (image) formData.append("image", image);
 
     setLoading(true);
     try {
-      const response = await axios.post("http://localhost:5000/api/upload", formData, {
+      const response = await axios.post("http://localhost:8080/events", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       alert("Report Submitted Successfully!");
